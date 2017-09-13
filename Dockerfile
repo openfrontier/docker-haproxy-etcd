@@ -1,4 +1,4 @@
-FROM haproxy:1.7
+FROM haproxy:latest
 
 MAINTAINER xingjiudong <25635680@qq.com>
 
