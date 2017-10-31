@@ -1,7 +1,7 @@
 global
 #    daemon
     log 127.0.0.1 local2
-    maxconn 256
+    maxconn "${MAXCONN}"
 
 defaults
     mode tcp
@@ -9,6 +9,15 @@ defaults
     timeout client  "${TIMEOUT_CLIENT}"
     timeout server  "${TIMEOUT_SERVER}" 
     log global
+
+# Enable Stats in HAProxy
+listen admin_stats
+    bind 0.0.0.0:8000
+    mode http
+    stats refresh 5s
+    stats uri /haproxy?stats
+    stats realm "HAProxy Statistics"
+    stats hide-version
 
 # Get haproxy-config with etcd
  
