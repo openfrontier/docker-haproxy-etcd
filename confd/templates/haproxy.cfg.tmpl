@@ -20,7 +20,6 @@ listen admin_stats
     stats hide-version
 
 # Get haproxy-config with etcd
- 
 {{range $dir := lsdir "/"}}
 frontend {{$dir}}-in
     bind {{$binddir := printf "/%s/frontend/bind" $dir}}{{getv $binddir}}
