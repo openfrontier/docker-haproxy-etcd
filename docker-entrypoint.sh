@@ -1,6 +1,11 @@
 #!/bin/bash
 set -e
-
+: ${TIMEOUT_CONNECT:=5s}
+: ${TIMEOUT_CLIENT:=50s}
+: ${TIMEOUT_SERVER:=50s}
+: ${TIMEOUT_HTTP_KEEP_ALIVE:=50s}
+: ${MAXCONN:=2000}
+ 
 # Make sure service is running
 service rsyslog start
 
