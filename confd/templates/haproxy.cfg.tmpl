@@ -5,10 +5,10 @@ global
 
 defaults
     mode tcp
-    timeout connect ${TIMEOUT_CONNECT}
-    timeout client  ${TIMEOUT_CLIENT}
-    timeout server  ${TIMEOUT_SERVER}
-    timeout http-keep-alive ${TIMEOUT_HTTP_KEEP_ALIVE}
+    timeout connect '${TIMEOUT_CONNECT}'
+    timeout client  '${TIMEOUT_CLIENT}'
+    timeout server  '${TIMEOUT_SERVER}'
+    timeout http-keep-alive '${TIMEOUT_HTTP_KEEP_ALIVE}'
     log global
 
 # Enable Stats in HAProxy
