@@ -1,12 +1,6 @@
 #!/bin/bash
 set -e
 
-export TIMEOUT_CONNECT=5s
-export TIMEOUT_CLIENT=50s
-export TIMEOUT_SERVER=50s
-export TIMEOUT_HTTP_KEEP_ALIVE=50s
-export MAXCONN=2000
-
 # Make sure service is running
 service rsyslog start
 
